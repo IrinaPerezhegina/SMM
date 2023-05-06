@@ -1,0 +1,15 @@
+@import "../libs/normalize.scss";
+@import "../libs/variable.scss";
+
+
+.wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 66px;
+    z-index: 1;
+    margin: 0 auto;
+    @media (max-width: 320px) {
+        gap: 6px;
+    }
+}

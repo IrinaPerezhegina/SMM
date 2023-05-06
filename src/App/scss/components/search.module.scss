@@ -1,0 +1,38 @@
+@import "../libs/normalize.scss";
+@import "../libs/variable.scss";
+
+.search{
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    height: 46px;
+    width: 1040px;
+    border-radius: 20px;
+    position: relative;
+    @media (max-width: 320px) {
+        width: 320px;
+        height: 30px;
+        }  
+    >input{
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        border: none;
+    }
+    >button{
+        height:46px;
+        width: 208px;
+        border-radius: 20px;
+        cursor: pointer;
+        background-color: $btn-color ;
+        border: none;
+        color: white;
+        position: absolute;
+        right: 0;
+        @media (max-width: 320px) {
+            width: 75px;
+            height: 30px;
+            font-size: 14px;
+            font-weight: $weight-700;
+            }  
+    }
+}

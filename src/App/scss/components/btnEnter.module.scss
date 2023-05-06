@@ -1,0 +1,22 @@
+@import "../libs/normalize.scss";
+@import "../libs/variable.scss";
+
+
+.btn{
+height: 41px;
+width: 120px;
+background-color: $btn-color;
+border-radius: 20px;
+border: none;
+color: white;
+line-height: 21.09px;
+text-transform: capitalize;
+font-weight: $weight-700;
+cursor: pointer;
+@media (max-width: 320px) {
+    height: 26px;
+    width: 73px;
+    font-size: 14px;
+    line-height: 16.41px;
+      }
+}

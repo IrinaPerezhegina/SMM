@@ -1,0 +1,257 @@
+@import "../libs/normalize.scss";
+@import "../libs/variable.scss";
+
+
+.wrapper{
+width: 1040px;
+cursor: pointer;
+position: relative;
+display: flex;
+gap: 10px;
+@media (max-width: 320px) {
+    // box-sizing: border-box;
+   flex-wrap: wrap;
+   width: 320px;
+   justify-content: space-around;
+   gap: 13px;
+   padding: 10px;
+    }  
+}
+
+.category{
+    position: relative;
+    height: 40px;
+    width: 176px;
+    border-radius: 20px;
+    display: inline;
+    @media (max-width: 320px) {
+        height: 26px;
+        width:140px;
+    } 
+    &::before{
+        content: "";  
+        position: absolute;
+        background-image: url("../../assets/main/arrow-down.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 29%;
+        right: 9%;
+        width: 20px;
+        height:20px;  
+        @media (max-width: 320px) {
+            width: 15px;
+            height:13px; 
+            top: 32%;
+            right:11%
+        } 
+    }
+   
+    >select{
+       cursor: pointer;
+        padding-left: 30px;
+        appearance: none;
+        height: 40px;
+        width: 176px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: none;
+        line-height: 21.09px;
+        @media (max-width: 320px) {
+            height: 26px;
+            width:140px;
+            font-size: 12px;
+            line-height: 14.06px;
+            padding-left: 13px;
+             } 
+}
+}
+
+.brand{
+    position: relative;
+    height: 40px;
+    width: 289px;
+    border-radius: 20px;
+    display: inline;
+    @media (max-width: 320px) {
+        height: 26px;
+        width:140px;
+    } 
+    &::before{
+        content: "";  
+        position: absolute;
+        background-image: url("../../assets/main/arrow-down.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 29%;
+        right:5%;
+        width: 20px;
+        height:20px;  
+        @media (max-width: 320px) {
+            width: 15px;
+            height:13px; 
+            top: 32%;
+            right:8%
+            } 
+    }
+    >select{
+       cursor: pointer;
+       padding-left: 30px;
+        appearance: none;
+        height: 40px;
+        width: 289px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: none;
+        line-height: 21.09px;
+        @media (max-width: 320px) {
+            height: 26px;
+            width:140px;
+            font-size: 12px;
+            line-height: 14.06px;
+            padding-left: 15px;
+             } 
+}
+}
+.age{
+    position: relative;
+    height: 40px;
+    width: 138px;
+    border-radius: 20px;
+    display: inline;
+    @media (max-width: 320px) {
+        height: 26px;
+        width:102px;
+        padding-top: 2px;
+    } 
+    &::before{
+        content: "";  
+        position: absolute;
+        background-image: url("../../assets/main/arrow-down.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 29%;
+        right:5%;
+        width: 20px;
+        height:20px;  
+        @media (max-width: 320px) {
+            width: 15px;
+            height:13px; 
+            top: 43%;
+            right:6%
+        } 
+    }
+    >select{
+       cursor: pointer;
+       padding-left: 30px;
+        appearance: none;
+        height: 40px;
+        width: 138px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: none;
+        line-height: 21.09px;
+        @media (max-width: 320px) {
+            height: 26px;
+            width:102px;
+            font-size: 12px;
+            line-height: 14.06px;
+            padding-left: 11px;
+             }
+}
+}
+
+.gender{
+    position: relative;
+    height: 40px;
+    width: 211px;
+    border-radius: 20px;
+    display: inline;
+    @media (max-width: 320px) {
+        height: 26px;
+        width:70px;
+        padding-top: 2px;
+    } 
+    &::before{
+        content: "";  
+        position: absolute;
+        background-image: url("../../assets/main/arrow-down.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 29%;
+        right:5%;
+        width: 20px;
+        height:20px;  
+        @media (max-width: 320px) {
+            width: 15px;
+            height:13px; 
+            top: 43%;
+            right: 3%
+        } 
+    }
+    >select{
+       cursor: pointer;
+       padding-left: 30px;
+        appearance: none;
+        height: 40px;
+        width: 211px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: none;
+        line-height: 21.09px;
+        @media (max-width: 320px) {
+            height: 26px;
+            width:70px;
+            font-size: 12px;
+            line-height: 14.06px;
+            padding-left: 7px;
+             }
+}
+}
+
+.region{
+    position: relative;
+    height: 40px;
+    width: 186px;
+    border-radius: 20px;
+    display: inline;
+    @media (max-width: 320px) {
+        height: 26px;
+        width:102px;
+        padding-top: 2px;
+    } 
+    &::before{
+        content: "";  
+        position: absolute;
+        background-image: url("../../assets/main/arrow-down.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 29%;
+        right:5%;
+        width: 20px;
+        height:20px; 
+        @media (max-width: 320px) {
+            width: 15px;
+            height:13px; 
+            top: 43%;
+            right: 6%
+        }  
+    }
+    >select{
+       cursor: pointer;
+       padding-left: 30px;
+        appearance: none;
+        height: 40px;
+        width: 186px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: none;
+        line-height: 21.09px;
+        @media (max-width: 320px) {
+            height: 26px;
+            width:102px;
+            font-size: 12px;
+            line-height: 14.06px;
+            padding-left: 10px;
+             }
+}
+}
