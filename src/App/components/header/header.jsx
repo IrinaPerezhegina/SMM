@@ -16,9 +16,9 @@ const Header = () => {
                         <Link to={"/"}>Контакты</Link>
                     </div>
                     <div>
-                        <Link to={"/"}> Зарегистрироваться</Link>
+                        <Link to={"register"}> Зарегистрироваться</Link>
                     </div>
-                    <Link to={"/"}>
+                    <Link to={""}>
                         <BtnEnter />
                     </Link>
                 </div>

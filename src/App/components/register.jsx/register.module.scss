@@ -1,0 +1,108 @@
+@import "../../scss/libs/normalize.scss";
+@import "../../scss/libs/variable.scss";
+
+.wrapper{
+    overflow: hidden;
+    padding-top: 56px;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    width: 1200px;
+    max-height: 926px;
+    margin: 0 auto;
+    @media (max-width: 320px) {
+        height: 514px;
+        width: 320px;
+        padding-top: 23px;
+
+    }
+}
+.register{
+    align-items: center;
+    padding-top:100px;
+    height: 100%;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   @media (max-width: 320px) {
+    padding-top:65px;
+    }
+    >span{
+    color:$btn-color;
+    font-weight: $weight-700;
+    font-size: 32px;
+    line-height: 37.5px;
+    padding-bottom: 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media (max-width: 320px) {
+        font-size: 18px;
+        line-height: 21.09px;
+        padding-bottom: 23px;
+
+    }
+   }
+}
+
+.registerForm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media (max-width: 320px) {
+        align-items: center;
+        gap: 9px;
+
+    }
+    >div>input{
+       width: 360px; 
+       height: 33px;
+       border-radius: 20px;
+       box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25);
+       border: 1px solid rgba(255, 54, 0, 0.7);
+       padding-left: 30px;
+       font-size: 18px;
+       line-height: 21.09px;
+       color:  rgba(13, 13, 13, 0.61);;
+       @media (max-width: 320px) {
+        width: 221px; 
+        height: 30px;
+        padding-left: 29px;
+        font-size: 12px;
+        line-height: 14.06px;
+    }
+    }
+    >button{
+        border: none;
+        margin-top: 11px;
+        width: 243px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: $btn-color;
+        color: white;
+        line-height: 21px;
+        font-weight: $weight-700;
+        text-align: center;
+        padding-right: 6px;
+       @media (max-width: 320px) {
+        margin-top: 8px;
+        line-height: 16.41px;
+        width: 166px;
+        height: 35px;
+        display: block;
+        font-size: 14px;
+        padding-right: 2px;
+        margin-right: 56px;
+       
+      
+    }
+    }
+}
+
+.statistics{
+   padding-top: 101px;
+    padding-left: 77px;
+    @media (max-width: 320px) {
+        padding-top: 52px;
+        padding-left: 0px;
+       
+    }
+}
