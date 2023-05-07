@@ -1,0 +1,268 @@
+@import "../../../scss/libs/normalize.scss";
+@import "../../../scss/libs/variable.scss";
+
+.wrapper{
+    overflow: hidden;
+    padding-top: 56px;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    width: 1200px;
+    max-height: 948px;
+    margin: 0 auto;
+    @media (max-width: 320px) {
+        max-height: 800px;
+        width: 320px;
+        padding-top: 23px;
+    }
+}
+.bloggerFinance{
+    position: relative;
+    top: 101px;
+    width: 1102px;
+    height: 367px;
+    margin: 0 auto;
+    background-color: rgba(255, 118, 0, 0.2);
+    border-radius: 30px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.01);
+    @media (max-width: 320px) {
+        top: 63px;
+        width: 320px;
+        height: 236px;
+        border-radius: 30px;
+    }
+}
+
+.statistics{
+    padding-top: 200px;
+     padding-left: 77px;
+     @media (max-width: 320px) {
+         padding-top: 113px;
+         padding-left: 0px;
+        
+     }
+ }
+
+ .links{
+    padding-top: 38px;
+    padding-left: 38px;
+    display: flex;
+    gap:60px;
+    font-size: 20px;
+    line-height: 23.44px;
+    @media (max-width: 320px) {
+        gap:5px;
+        padding-top: 25px;
+        padding-left: 10px;
+    }
+    &Right{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        letter-spacing: .2px;
+        line-height: 23.44px;
+        @media (max-width: 320px) {
+            gap:3px;
+            line-height: 14.06px;
+            >div>a{
+                font-size: 12px;
+                letter-spacing:-.3px;
+            }
+        }
+    &Active{
+       color: #FF3600;
+       letter-spacing: .9px;
+    }
+       
+    }
+    &Middle{
+        padding-left: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        line-height: 23.44px;
+        @media (max-width: 320px) {
+            padding-left: 57px;
+            gap:3px;
+            line-height: 14.06px;
+            >div>a{
+                font-size: 12px;
+                letter-spacing:-.3px;
+            }
+        }
+        &Active{
+            color: #FF3600;
+            letter-spacing: 1.3px;
+         }    
+    }
+    &Left{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        line-height: 23.44px;
+        padding-left:3px;
+        @media (max-width: 320px) {
+            padding-top: 18px;
+            padding-left:20px;
+            gap:3px;
+            line-height: 14.06px;
+            >div>a{
+                font-size: 12px;
+                letter-spacing:-.3px;
+            }
+        }
+    }
+ }
+ .change{
+    padding-top: 9px;
+    padding-left: 38px;
+    text-decoration: underline;
+    line-height: 21.09px;
+    color:$btn-color;
+    cursor: pointer;
+    @media (max-width: 320px) {
+        padding-top: 1px;
+        padding-left:10px;
+        font-size: 12px;
+     }
+    
+ }
+
+ .formFinance{
+    padding-left: 38px;
+    margin-top: 29px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    line-height: 21.09px;
+    @media (max-width: 320px) {
+        padding-left: 10px;
+        margin-top:5px;
+        display: flex;
+        flex-direction: column;
+        gap:14px;
+        line-height: 21.09px;
+     }
+    &Balance{
+        display: flex;
+        gap:68px;
+        @media (max-width: 320px) {
+            gap: 48px;
+         }
+        >label{
+            letter-spacing:-1.8px;
+            line-height: 43.09px;
+            word-spacing: 9px;
+            @media (max-width: 320px) {
+                padding-top:13px;
+                font-size: 12px;
+                line-height:4px;
+                gap: 40px;
+             }
+        }
+        >input{
+            margin-top: 6px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top: 1px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+    &Insert{
+        display: flex;
+        gap: 44px;
+        @media (max-width: 320px) {
+            gap: 29px;
+         }
+        >label{
+            line-height: 41px;
+            @media (max-width: 320px) {
+                font-size: 12px;
+                line-height: 24px;
+                gap: 50px;
+             }
+        }
+        >input{
+            margin-top: 4px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+                margin-top:3px;
+             }
+        }
+    }
+    &Takeout{
+        display: flex;
+        gap:29px;
+        @media (max-width: 320px) {
+            gap: 20px;
+         }
+        >label{
+            line-height: 40px;
+            @media (max-width: 320px) {
+                font-size: 12px;
+                line-height: 20px;
+                gap: 40px;
+             }
+        }
+        >input{
+            margin-top: 3px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top:0px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+    &Extract{
+        display: flex;
+        gap:90px;
+        @media (max-width: 320px) {
+            gap: 60px;
+         }
+         >label{
+            line-height: 40px;
+            @media (max-width: 320px) {
+                font-size: 12px;
+                line-height: 20px;
+                gap: 40px;
+             }
+        }
+        >input{
+            margin-top: 3px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top: 0px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+}
+   
+    
+ 

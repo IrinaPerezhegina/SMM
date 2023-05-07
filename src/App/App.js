@@ -5,6 +5,7 @@ import MainPage from "./pages/MainPage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import BloggerProfilePage from "./pages/BloggerProfilePage";
+import BloggerFinancePage from "./pages/BloggerFinancePage";
 
 function App() {
     return (
@@ -20,6 +21,9 @@ function App() {
             </Routes>
             <Routes>
                 <Route path="blgprofile" element={<BloggerProfilePage />} />
+            </Routes>
+            <Routes>
+                <Route path="blgfinance" element={<BloggerFinancePage />} />
             </Routes>
         </div>
     );

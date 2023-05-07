@@ -23,13 +23,13 @@ const BloggerProfile = () => {
                             <Link>Рекламодатель</Link>
                         </div>
                         <div>
-                            <Link>Финансы</Link>
+                            <Link to={"../blgfinance"}>Финансы</Link>
                         </div>
                     </div>
                     <div className={styles.linksLeft}>
                         <div></div>
                         <div>
-                            <Link>Заказы</Link>
+                            <Link to={"../blgorder"}>Заказы</Link>
                         </div>
                     </div>
                 </div>
