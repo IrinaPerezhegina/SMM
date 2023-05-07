@@ -18,7 +18,7 @@ const Header = () => {
                     <div>
                         <Link to={"register"}> Зарегистрироваться</Link>
                     </div>
-                    <Link to={""}>
+                    <Link to={"login"}>
                         <BtnEnter />
                     </Link>
                 </div>
