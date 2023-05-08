@@ -28,7 +28,10 @@ const BloggerFinance = () => {
                             <Link>Рекламодатель</Link>
                         </div>
                         <div>
-                            <Link className={styles.linksMiddleActive}>
+                            <Link
+                                className={styles.linksMiddleActive}
+                                to={"../blgfinance"}
+                            >
                                 Финансы
                             </Link>
                         </div>
@@ -36,7 +39,7 @@ const BloggerFinance = () => {
                     <div className={styles.linksLeft}>
                         <div></div>
                         <div>
-                            <Link to={"../blorder"}>Заказы</Link>
+                            <Link to={"../blgorder"}>Заказы</Link>
                         </div>
                     </div>
                 </div>

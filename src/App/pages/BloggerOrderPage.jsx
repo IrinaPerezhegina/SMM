@@ -1,10 +1,10 @@
 import React from "react";
-import BloggerFinance from "../components/personalAccount/bloggerFinance/bloggerFinance";
+import BloggerOrder from "../components/personalAccount/bloggerOrder/bloggerOrder";
 
 const BloggerOrderPage = () => {
     return (
         <>
-            <BloggerFinance />
+            <BloggerOrder />
         </>
     );
 };

@@ -8,7 +8,7 @@ const BloggerProfile = () => {
     return (
         <div className={styles.wrapper}>
             <GroupComponent />
-            <section className={styles.bloggerProfile}>
+            <section className={styles.bloggerOrder}>
                 <div className={styles.links}>
                     <div className={styles.linksRight}>
                         <div>
