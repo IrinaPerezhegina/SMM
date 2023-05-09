@@ -47,7 +47,7 @@ const AdvertiserProfile = () => {
                 <form action="" className={styles.formProfile}>
                     <div className={styles.formProfileAdvertiser}>
                         <label htmlFor="advertiser">Рекламодатель</label>
-                        <input type="text" name="Advertiser" id="Advertiser" />
+                        <input type="text" name="advertiser" id="advertiser" />
                     </div>
                     <div className={styles.formProfileINN}>
                         <label htmlFor="inn">ИНН</label>
