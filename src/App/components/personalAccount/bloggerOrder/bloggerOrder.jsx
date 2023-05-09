@@ -25,7 +25,7 @@ const BloggerOrder = () => {
                     </div>
                     <div className={styles.linksMiddle}>
                         <div>
-                            <Link>Рекламодатель</Link>
+                            <Link to={"../advprofile"}>Рекламодатель</Link>
                         </div>
                         <div>
                             <Link to={"../blgfinance"}>Финансы</Link>

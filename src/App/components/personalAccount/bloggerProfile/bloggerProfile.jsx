@@ -8,7 +8,7 @@ const BloggerProfile = () => {
     return (
         <div className={styles.wrapper}>
             <GroupComponent />
-            <section className={styles.bloggerOrder}>
+            <section className={styles.bloggerProfile}>
                 <div className={styles.links}>
                     <div className={styles.linksRight}>
                         <div>
@@ -20,7 +20,7 @@ const BloggerProfile = () => {
                     </div>
                     <div className={styles.linksMiddle}>
                         <div>
-                            <Link>Рекламодатель</Link>
+                            <Link to={"../advprofile"}>Рекламодатель</Link>
                         </div>
                         <div>
                             <Link to={"../blgfinance"}>Финансы</Link>

@@ -1,0 +1,368 @@
+@import "../../../scss/libs/normalize.scss";
+@import "../../../scss/libs/variable.scss";
+
+.wrapper{
+    overflow: hidden;
+    padding-top: 56px;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    width: 1200px;
+    max-height: 948px;
+    margin: 0 auto;
+    @media (max-width: 320px) {
+        max-height: 651px;
+        width: 320px;
+        padding-top: 23px;
+    }
+}
+.advertiserProfile{
+    position: relative;
+    padding-bottom: 30px;
+    top: 101px;
+    width: 1102px;
+    height: 484px;
+    margin: 0 auto;
+    background-color: rgba(255, 118, 0, 0.2);
+    border-radius: 30px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.10);
+    @media (max-width: 320px) {
+        top: 63px;
+        width: 320px;
+        height: 340px;
+        border-radius: 30px;
+    }
+}
+
+.statistics{
+    padding-top: 200px;
+    padding-bottom: 30px;
+     padding-left: 77px;
+     @media (max-width: 320px) {
+         padding-top: 115px;
+         padding-left: 13px;
+        
+     }
+ }
+
+ .links{
+    padding-top:18px;
+    padding-left: 38px;
+    display: flex;
+    gap:50px;
+    font-size: 20px;
+    line-height: 23.44px;
+    @media (max-width: 320px) {
+        gap:5px;
+        padding-top: 25px;
+        padding-left: 10px;
+    }
+    &Right{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        line-height: 23.44px;
+        &Active{
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: #FF3600;
+            letter-spacing: .9px;
+         }
+        @media (max-width: 320px) {
+            gap:3px;
+            line-height: 14.06px;
+            >div>a{
+                font-size: 12px;
+                letter-spacing:-.3px;
+            }
+        }
+       
+    }
+    &Middle{
+        padding-left: 33px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        line-height: 23.44px;
+        &Active{
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: #FF3600;
+            letter-spacing: .9px;
+         }
+        @media (max-width: 320px) {
+            padding-left: 57px;
+            gap:3px;
+            line-height: 14.06px;
+            >div>a{
+                font-size: 12px;
+                letter-spacing:-.3px;
+            }
+        }
+    }
+    &Left{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        line-height: 23.44px;
+        @media (max-width: 320px) {
+            padding-top: 18px;
+            padding-left:20px;
+            gap:3px;
+            line-height: 14.06px;
+            >div>a{
+                font-size: 12px;
+                letter-spacing:-.3px;
+            }
+        }
+    }
+ }
+ .change{
+    padding-top: 9px;
+    padding-left: 38px;
+    text-decoration: underline;
+    line-height: 17px;
+    color:$btn-color;
+    cursor: pointer;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media (max-width: 320px) {
+        padding-top: 3px;
+        padding-left:10px;
+        font-size: 12px;
+     }
+    
+ }
+
+ .formProfile{
+    padding-left: 38px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    @media (max-width: 320px) {
+        padding-left: 10px;
+        margin-top:5px;
+        display: flex;
+        flex-direction: column;
+        gap:11px;
+        line-height: 21.09px;
+     }
+    &Advertiser{
+        display: flex;
+        gap: 34px;
+        @media (max-width: 320px) {
+            gap: 23px;
+         }
+        >label{
+            line-height: 40px;
+            @media (max-width: 320px) {
+                padding-top:15px;
+                font-size: 12px;
+                line-height:4px;
+                gap: 40px;
+             }
+        }
+        >input{
+            padding-left: 5px;
+            margin-top: 5px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top:3px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+    &INN{
+        display: flex;
+        gap: 127px;
+        @media (max-width: 320px) {
+            gap: 83px;
+         }
+        >label{
+            letter-spacing: .5px;
+            line-height: 40px;
+            @media (max-width: 320px) {
+                font-size: 12px;
+                line-height: 29px;
+                gap: 40px;
+             }
+        }
+        >input{
+            margin-top: 4px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+    &Adress{
+        display: flex;
+        gap:113px;
+        @media (max-width: 320px) {
+            gap: 74px;
+         }
+        >label{
+            letter-spacing: .4px;
+            line-height: 40px;
+            @media (max-width: 320px) {
+                font-size: 12px;
+                line-height: 20px;
+                gap: 40px;
+             }
+        }
+        >input{
+            margin-top: 3px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top: 0px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+    &Email{
+        display: flex;
+        gap:113px;
+        @media (max-width: 320px) {
+            gap: 76px;
+         }
+        >label{
+            letter-spacing: .4px;
+            line-height: 40px;
+            @media (max-width: 320px) {
+                letter-spacing: 0px;
+                font-size: 12px;
+                line-height: 15px;
+                gap: 40px;
+             }
+        }
+        >input{
+            margin-top: 7px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top: -2px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+     
+    }
+    &Phone{
+        display: flex;
+        gap:90px;
+        @media (max-width: 320px) {
+            gap: 61px;
+         }
+        >label{
+            letter-spacing: .4px;
+            line-height: 40px;
+            @media (max-width: 320px) {
+                letter-spacing: 0px;
+                font-size: 12px;
+                line-height: 30px;
+             }
+        }
+        >input{
+            margin-top: 5px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top: 4px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+     
+    }
+    &Web{
+        display: flex;
+        gap:100px;
+        @media (max-width: 320px) {
+            gap: 65px;
+         }
+        >label{
+            letter-spacing: .4px;
+            line-height:45px;
+            @media (max-width: 320px) {
+                letter-spacing: .1px;
+                font-size: 12px;
+                line-height: 30px;
+                gap: 40px;
+             }
+        }
+        >input{
+            margin-top: 8px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top: 3px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+     
+    }
+    &Password{
+        padding-bottom: 21px;
+        display: flex;
+        @media (max-width: 320px) {
+            gap: 0px;
+         }
+        >label{
+            letter-spacing: -.3px;
+            line-height:40px;
+            padding-right: 30px;
+            @media (max-width: 320px) {
+                letter-spacing: 0px;
+                font-size: 12px;
+                line-height:14px;
+               padding-right: 17px;
+             }
+        }
+        >input{
+            margin-top: 3px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top: -2px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+    }
+   
+    
+ 

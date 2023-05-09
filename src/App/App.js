@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage";
 import BloggerProfilePage from "./pages/BloggerProfilePage";
 import BloggerFinancePage from "./pages/BloggerFinancePage";
 import BloggerOrderPage from "./pages/BloggerOrderPage";
+import AdvertiserProfilePage from "./pages/AdvertiserProfilePage";
 
 function App() {
     return (
@@ -28,6 +29,9 @@ function App() {
             </Routes>
             <Routes>
                 <Route path="blgorder" element={<BloggerOrderPage />} />
+            </Routes>
+            <Routes>
+                <Route path="advprofile" element={<AdvertiserProfilePage />} />
             </Routes>
         </div>
     );
