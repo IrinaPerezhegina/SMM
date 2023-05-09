@@ -51,7 +51,9 @@ const BloggerOrder = () => {
                         <div>Чат</div>
                     </div>
                     <div className={styles.tableBody}>
-                        <div>Компания 1</div>
+                        <div>
+                            <Link to={"company"}>Компания 1</Link>
+                        </div>
                         <div>разместить фото и текст</div>
                         <div>Instagram</div>
                         <div>Москва</div>
@@ -61,7 +63,9 @@ const BloggerOrder = () => {
                         <div>обсудить с заказчиком</div>
                     </div>
                     <div className={styles.tableBody}>
-                        <div>Компания 2</div>
+                        <div>
+                            <Link to={"company"}>Компания 2</Link>
+                        </div>
                         <div>разместить фото и текст</div>
                         <div>Instagram</div>
                         <div>Москва</div>
@@ -71,7 +75,9 @@ const BloggerOrder = () => {
                         <div>обсудить с заказчиком</div>
                     </div>
                     <div className={styles.tableBody}>
-                        <div>Компания 3</div>
+                        <div>
+                            <Link to={"company"}>Компания 3</Link>
+                        </div>
                         <div>разместить фото и текст</div>
                         <div>Instagram</div>
                         <div>Москва</div>
@@ -81,7 +87,9 @@ const BloggerOrder = () => {
                         <div>обсудить с заказчиком</div>
                     </div>
                     <div className={styles.tableBody}>
-                        <div>Компания 4</div>
+                        <div>
+                            <Link to={"company"}>Компания 4</Link>
+                        </div>
                         <div>разместить фото и текст</div>
                         <div>Instagram</div>
                         <div>Москва</div>
@@ -91,7 +99,9 @@ const BloggerOrder = () => {
                         <div>обсудить с заказчиком</div>
                     </div>
                     <div className={styles.tableBody}>
-                        <div>Компания 5</div>
+                        <div>
+                            <Link to={"company"}>Компания 5</Link>
+                        </div>
                         <div>разместить фото и текст</div>
                         <div>Instagram</div>
                         <div>Москва</div>
@@ -101,7 +111,10 @@ const BloggerOrder = () => {
                         <div>обсудить с заказчиком</div>
                     </div>
                     <div className={styles.tableBody}>
-                        <div>Компания 6</div>
+                        <div>
+                            {" "}
+                            <Link to={"company"}>Компания 6</Link>
+                        </div>
                         <div>разместить фото и текст</div>
                         <div>Instagram</div>
                         <div>Москва</div>
@@ -111,7 +124,9 @@ const BloggerOrder = () => {
                         <div>обсудить с заказчиком</div>
                     </div>
                     <div className={styles.tableBody}>
-                        <div>Компания 7</div>
+                        <div>
+                            <Link to={"company"}>Компания 7</Link>
+                        </div>
                         <div>разместить фото и текст</div>
                         <div>Instagram</div>
                         <div>Москва</div>
@@ -121,7 +136,9 @@ const BloggerOrder = () => {
                         <div>обсудить с заказчиком</div>
                     </div>
                     <div className={styles.tableBody}>
-                        <div>Компания 8</div>
+                        <div>
+                            <Link to={"company"}>Компания 8</Link>
+                        </div>
                         <div>разместить фото и текст</div>
                         <div>Instagram</div>
                         <div>Москва</div>
@@ -131,7 +148,9 @@ const BloggerOrder = () => {
                         <div>обсудить с заказчиком</div>
                     </div>
                     <div className={styles.tableBody}>
-                        <div>Компания 9</div>
+                        <div>
+                            <Link to={"company"}>Компания 9</Link>
+                        </div>
                         <div>разместить фото и текст</div>
                         <div>Instagram</div>
                         <div>Москва</div>
@@ -141,7 +160,9 @@ const BloggerOrder = () => {
                         <div>обсудить с заказчиком</div>
                     </div>
                     <div className={styles.tableBody}>
-                        <div>Компания 10</div>
+                        <div>
+                            <Link to={"company"}>Компания 10</Link>
+                        </div>
                         <div>разместить фото и текст</div>
                         <div>Instagram</div>
                         <div>Москва</div>

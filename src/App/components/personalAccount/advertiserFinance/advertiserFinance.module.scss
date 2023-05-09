@@ -1,0 +1,375 @@
+@import "../../../scss/libs/normalize.scss";
+@import "../../../scss/libs/variable.scss";
+
+.wrapper{
+    overflow: hidden;
+    padding-top: 56px;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    width: 1200px;
+    max-height: 948px;
+    margin: 0 auto;
+    @media (max-width: 320px) {
+        max-height: 651px;
+        width: 320px;
+        padding-top: 23px;
+    }
+}
+.advertiserFinance{
+    position: relative;
+    padding-bottom: 30px;
+    top: 101px;
+    left: -8px;
+    width: 1102px;
+    height: 413px;
+    margin: 0 auto;
+    background-color: rgba(255, 118, 0, 0.2);
+    border-radius: 30px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.10);
+    @media (max-width: 320px) {
+        top: 63px;
+        width: 320px;
+        height: 271px;
+        border-radius: 30px;
+    }
+}
+
+.statistics{
+    padding-top: 200px;
+    padding-bottom: 30px;
+     padding-left: 77px;
+     @media (max-width: 320px) {
+         padding-top: 115px;
+         padding-left: 11px;
+        
+     }
+ }
+
+ .links{
+    padding-top:38px;
+    padding-left: 38px;
+    display: flex;
+    gap:47px;
+    font-size: 20px;
+    line-height: 23.44px;
+    @media (max-width: 320px) {
+        gap:5px;
+        padding-top: 25px;
+        padding-left: 20px;
+    }
+    &Right{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        line-height: 23.44px;
+        @media (max-width: 320px) {
+            gap:3px;
+            line-height: 14.06px;
+            >div>a{
+                font-size: 12px;
+                letter-spacing:-.3px;
+            }
+        }
+       
+    }
+    &Middle{
+        padding-left: 41px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        line-height: 23.44px;
+        >div>a{
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: #FF3600;
+            letter-spacing: 1.2px;
+        }
+        @media (max-width: 320px) {
+            padding-left: 57px;
+            gap:3px;
+            line-height: 14.06px;
+            >div>a{
+                font-size: 12px;
+                letter-spacing:-.3px;
+            }
+        }
+    }
+    &Left{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        line-height: 23.44px;
+        @media (max-width: 320px) {
+            padding-top: 18px;
+            padding-left:20px;
+            gap:3px;
+            line-height: 14.06px;
+            >div>a{
+                font-size: 12px;
+                letter-spacing:-.3px;
+            }
+        }
+    }
+ }
+
+
+ .formFinance{
+    padding-left: 38px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+    @media (max-width: 320px) {
+        padding-left: 18px;
+        margin-top:24px;
+        display: flex;
+        flex-direction: column;
+        gap:11px;
+        line-height: 21.09px;
+     }
+    &Time{
+        display: flex;
+        gap: 100px;
+        @media (max-width: 320px) {
+            gap:70px;
+         }
+        >label{
+            line-height: 40px;
+            @media (max-width: 320px) {
+                padding-top:15px;
+                font-size: 12px;
+                line-height:4px;
+                gap: 40px;
+             }
+        }
+        >input{
+            padding-left: 10px;
+            letter-spacing: -.9px;
+            margin-top: 5px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                padding-left: 2px;
+                font-size: 12px;
+                letter-spacing:0px;
+                margin-top:3px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+    &Сoming{
+        display: flex;
+        gap: 105px;
+        @media (max-width: 320px) {
+            gap:70px;
+         }
+        >label{
+            letter-spacing: -.4px;
+            line-height: 40px;
+            @media (max-width: 320px) {
+                font-size: 12px;
+                line-height: 29px;
+                gap: 40px;
+             }
+        }
+        >input{
+            padding-left: 10px;
+            letter-spacing: -0.9px;
+            margin-top: 4px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                padding-top: 2px;
+                padding-left: 15px;
+                font-size: 12px;
+                letter-spacing:0px;
+                margin-top:3px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+    &Expenditure{
+        display: flex;
+        gap:105px;
+        @media (max-width: 320px) {
+            gap:70px;
+         }
+        >label{
+            letter-spacing: -.4px;
+            line-height: 42px;
+            @media (max-width: 320px) {
+                font-size: 12px;
+                line-height: 20px;
+                gap: 40px;
+             }
+        }
+        >input{
+            padding-left: 11px;
+            letter-spacing: -0.9px;
+            margin-top: 4px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                padding-bottom: 5px;
+                padding-left: 17px;
+                font-size: 12px;
+                letter-spacing:0px;
+                margin-top:3px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+    &Balance{
+        display: flex;
+        gap:105px;
+        @media (max-width: 320px) {
+            gap:70px;
+         }
+         >label{
+            letter-spacing: -.4px;
+            line-height: 39px;
+            @media (max-width: 320px) {
+                font-size: 12px;
+                line-height: 20px;
+                gap: 40px;
+             }
+        }
+        >input{
+            padding-left: 11px;
+            letter-spacing: -0.9px;
+            margin-top: 4px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                padding-bottom: 5px;
+                padding-left: 13px;
+                font-size: 12px;
+                letter-spacing:0px;
+                margin-top:3px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+     
+    }
+    &Payment{
+        display: flex;
+        gap:86px;
+        @media (max-width: 320px) {
+            gap: 55px;
+         }
+        >label{
+            letter-spacing: -.3px;
+            line-height: 38px;
+            @media (max-width: 320px) {
+                letter-spacing: 0px;
+                font-size: 12px;
+                line-height: 30px;
+             }
+        }
+        >input{
+            padding-left: 5px;
+            margin-top: 5px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top: 4px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+     
+    }
+    &Web{
+        display: flex;
+        gap:100px;
+        @media (max-width: 320px) {
+            gap: 65px;
+         }
+        >label{
+            letter-spacing: .4px;
+            line-height:45px;
+            @media (max-width: 320px) {
+                letter-spacing: .1px;
+                font-size: 12px;
+                line-height: 30px;
+                gap: 40px;
+             }
+        }
+        >input{
+            padding-left: 5px;
+            margin-top: 8px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top: 3px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+     
+    }
+    &Password{
+        padding-bottom: 21px;
+        display: flex;
+        @media (max-width: 320px) {
+            gap: 0px;
+         }
+        >label{
+            letter-spacing: -.3px;
+            line-height:40px;
+            padding-right: 30px;
+            @media (max-width: 320px) {
+                letter-spacing: 0px;
+                font-size: 12px;
+                line-height:14px;
+               padding-right: 17px;
+             }
+        }
+        >input{
+            padding-left: 5px;
+            margin-top: 3px;
+            width: 177px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            background-color: rgba(255, 118, 0, 0.01);
+            @media (max-width: 320px) {
+                margin-top: -2px;
+                width: 88px;
+                height: 20px;
+                border-radius: 5px;
+             }
+        }
+    }
+    }
+   
+    
+ 

@@ -33,7 +33,7 @@ const AdvertiserProfile = () => {
                             </Link>
                         </div>
                         <div>
-                            <Link to={"../blgfinance"}>Финансы</Link>
+                            <Link to={"../advfinance"}>Финансы</Link>
                         </div>
                     </div>
                     <div className={styles.linksLeft}>

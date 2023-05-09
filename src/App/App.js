@@ -10,39 +10,30 @@ import BloggerOrderPage from "./pages/BloggerOrderPage";
 import AdvertiserProfilePage from "./pages/AdvertiserProfilePage";
 import AdvertiserOrderPage from "./pages/AdvertiserOrderPage";
 import AdvertiserNewOrderPage from "./pages/AdvertiserNewOrderPage";
+import AdvertiserFinancePage from "./pages/AdvertiserFinancePage";
+import AdvertiserOrderChoicePage from "./pages/AdvertiserOrderChoicePage";
 
 function App() {
     return (
         <div className={styles.wrapper}>
             <Routes>
                 <Route path="" element={<MainPage />} />
-            </Routes>
-            <Routes>
                 <Route path="register" element={<RegisterPage />} />
-            </Routes>
-            <Routes>
                 <Route path="login" element={<LoginPage />} />
-            </Routes>
-            <Routes>
                 <Route path="blgprofile" element={<BloggerProfilePage />} />
-            </Routes>
-            <Routes>
                 <Route path="blgfinance" element={<BloggerFinancePage />} />
-            </Routes>
-            <Routes>
                 <Route path="blgorder" element={<BloggerOrderPage />} />
-            </Routes>
-            <Routes>
                 <Route path="advprofile" element={<AdvertiserProfilePage />} />
-            </Routes>
-            <Routes>
                 <Route path="advorder" element={<AdvertiserOrderPage />} />
-            </Routes>
-            <Routes>
                 <Route
                     path="advneworder"
                     element={<AdvertiserNewOrderPage />}
                 />
+                <Route
+                    path="advneworder/choice"
+                    element={<AdvertiserOrderChoicePage />}
+                />
+                <Route path="advfinance" element={<AdvertiserFinancePage />} />
             </Routes>
         </div>
     );
