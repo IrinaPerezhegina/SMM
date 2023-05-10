@@ -12,6 +12,7 @@ import AdvertiserOrderPage from "./pages/AdvertiserOrderPage";
 import AdvertiserNewOrderPage from "./pages/AdvertiserNewOrderPage";
 import AdvertiserFinancePage from "./pages/AdvertiserFinancePage";
 import AdvertiserOrderChoicePage from "./pages/AdvertiserOrderChoicePage";
+import AdvertiserAcceptancePage from "./pages/AdvertiserAcceptancePage";
 
 function App() {
     return (
@@ -34,6 +35,10 @@ function App() {
                     element={<AdvertiserOrderChoicePage />}
                 />
                 <Route path="advfinance" element={<AdvertiserFinancePage />} />
+                <Route
+                    path="advneworder/advacceptance"
+                    element={<AdvertiserAcceptancePage />}
+                />
             </Routes>
         </div>
     );

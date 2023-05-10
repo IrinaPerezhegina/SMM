@@ -16,7 +16,7 @@
         padding-top: 23px;
     }
 }
-.AdvertiserOrderChoice{
+.AdvertiserAcceptance{
     left: -8px;
     position: relative;
     padding-bottom:50px;
@@ -174,28 +174,24 @@
     &Head{
         position: relative;
         display: grid;
-        grid-template-columns: 140px 103px 90px 96px 104px 79px 81px 144px 112px 106px;
+        grid-template-columns: 92px 67px 86px 97px 76px 80px 72px 123px 95x 106px 118px 64px 72px;
         grid-template-rows:55px;
         @media (max-width: 320px) {
             grid-template-columns: 70px 69px 64px 70px 82px 52px 52px 112px 87px 82px;
             grid-template-rows:43px;
              }
-        
-      >div{
-       &:nth-child(1){
-        border: none;
-        background-color: rgba(255, 118, 0, 0.0002);
-       }
+        >div{
             font-size: 16px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align:center;
-            line-height: 16px;
-            word-spacing: 4px;
-            background:  rgb(240,158,86, 0.3);
-            border: 1px solid rgba(13, 13, 13, 0.3);
-           font-weight: $weight-500;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align:center;
+        line-height: 16px;
+        word-spacing: 4px;
+        background:  rgb(240,158,86, 0.3);
+        border: 1px solid rgba(13, 13, 13, 0.3);
+        font-weight: $weight-500;
+        }
            @media (max-width: 320px) {
             display: flex;
             flex-direction: column;
@@ -212,20 +208,15 @@
         grid-column-start: 3;
         position: relative;
         display: grid;
-        grid-template-columns: 140px 103px 90px 96px 104px 79px 81px 144px 112px 106px;
+        grid-template-columns: 92px 67px 86px 97px 76px 80px 72px 123px 95x 106px 118px 64px 72px;
         grid-template-rows:55px;
         @media (max-width: 320px) {
             grid-template-columns: 70px 69px 64px 70px 82px 52px 52px 112px 87px 82px;
             grid-template-rows:20px;
             
-        }
-        
-           
+        }       
     >div{
-        &:nth-child(1){
-            border: none;
-            background-color: rgba(255, 118, 0, 0.0002);
-        }
+     
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -238,82 +229,14 @@
             font-size: 12px;
            line-height: 14px;
        }
-        }
+        
     }
-           
+}       
     
-}
 
 
-.check{
-    >label{
-       display: flex;
-        height: 100%;
-        width: 100%;
-       flex-direction: column;
-       justify-content: center;
-        padding-top: 5px;
-        padding-left: 33px;
-        font-size: 14px;
-        cursor: pointer;
-        @media (max-width: 320px) {
-            white-space: pre-wrap;
-            width: 66px;
-            display: flex;
-            flex-direction: column;
-            padding-top: 1px;
-            padding-left:14px;
-            font-size: 10px;
-            line-height: 13px;
-       }
-    }
-    input{
-        display: none;
-     }
-   
-}
 
-.item{
-    >label{
-        position: relative;
-        display: flex;
-        height: 20px;
-        width:20px;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        border: 1px solid rgba(13, 13, 13, 0.59);
-        margin-left: 77px;
-        cursor: pointer;
-        @media (max-width: 320px) {
-            margin-left:28px;
-            height: 15px;
-            width:15px;
-       }
-        &::before{
-            content: "";  
-            position: absolute;
-            background-image: url("../../../assets/main/checkbox.png");
-            background-repeat: no-repeat;
-            background-size: contain;
-            display: inline-block;
-            top:21%;
-            left:1%;
-            width: 19px;
-            height:14px;
-            @media (max-width: 320px) {
-                top:16%;
-            left:1%;
-            width: 15px;
-            height:15px;
-           }
-            
-        }
-     }
-     input{
-         display: none;
-      }
-}
+
 .order{
     padding-top: 20px;
     padding-left: 139px;

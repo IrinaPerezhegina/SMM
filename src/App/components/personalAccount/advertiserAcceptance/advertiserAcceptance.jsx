@@ -1,14 +1,14 @@
 import React from "react";
-import styles from "./advertiserOrderChoice.module.scss";
+import styles from "./advertiserAcceptance.module.scss";
 import GroupComponent from "../../ui/groupComponent";
 import Statistics from "../../ui/statistics";
 import { Link } from "react-router-dom";
 
-const AdvertiserOrderChoice = () => {
+const AdvertiserAcceptance = () => {
     return (
         <div className={styles.wrapper}>
             <GroupComponent />
-            <section className={styles.AdvertiserOrderChoice}>
+            <section className={styles.AdvertiserAcceptance}>
                 <div className={styles.links}>
                     <div className={styles.linksRight}>
                         <div>
@@ -39,32 +39,27 @@ const AdvertiserOrderChoice = () => {
                     </div>
                 </div>
                 <div className={styles.company}>
-                    <Link to={"advacceptance"}>Компания № 1</Link>
+                    <Link>Компания № 1</Link>
                     <Link>Название компании</Link>
                     <Link>Дата</Link>
                 </div>
                 <div className={styles.table}>
                     <div className={styles.tableCheckbox}>
                         <div className={styles.tableHead}>
-                            <div className={styles.check}>
-                                <label htmlFor="all">выбрать всех</label>
-                                <input type="checkbox" name="all" id="all" />
-                            </div>
                             <div>Соцсеть</div>
                             <div>Блогер</div>
                             <div>Тематика</div>
                             <div>Подписчики</div>
                             <div>Кол-во постов</div>
                             <div>Кол-во лайков</div>
+                            <div>Бюджет</div>
                             <div>Преобладающая эмоция</div>
-                            <div>Цена за пост, руб</div>
                             <div>Цена за подписчика, руб</div>
+                            <div>Ссылка на пост</div>
+                            <div>Принять все</div>
+                            <div>Чат с блогером</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.item}>
-                                <label htmlFor="1"></label>
-                                <input type="checkbox" name="1" id="1" />
-                            </div>
                             <div>Tiktok</div>
                             <div>Аня 1</div>
                             <div>еда</div>
@@ -76,10 +71,6 @@ const AdvertiserOrderChoice = () => {
                             <div>1</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.item}>
-                                <label htmlFor="1"></label>
-                                <input type="checkbox" name="1" id="1" />
-                            </div>
                             <div>Instagram</div>
                             <div>Аня 2</div>
                             <div>еда</div>
@@ -91,10 +82,6 @@ const AdvertiserOrderChoice = () => {
                             <div>1</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.item}>
-                                <label htmlFor="1"></label>
-                                <input type="checkbox" name="1" id="1" />
-                            </div>
                             <div>Tiktok</div>
                             <div>Аня 3</div>
                             <div>еда</div>
@@ -106,10 +93,6 @@ const AdvertiserOrderChoice = () => {
                             <div>1</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.item}>
-                                <label htmlFor="1"></label>
-                                <input type="checkbox" name="1" id="1" />
-                            </div>
                             <div>Instagram</div>
                             <div>Аня 4</div>
                             <div>еда</div>
@@ -121,10 +104,6 @@ const AdvertiserOrderChoice = () => {
                             <div>1</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.item}>
-                                <label htmlFor="1"></label>
-                                <input type="checkbox" name="1" id="1" />
-                            </div>
                             <div>Tiktok</div>
                             <div>Аня 5</div>
                             <div>еда</div>
@@ -136,10 +115,6 @@ const AdvertiserOrderChoice = () => {
                             <div>1</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.item}>
-                                <label htmlFor="1"></label>
-                                <input type="checkbox" name="1" id="1" />
-                            </div>
                             <div>Instagram</div>
                             <div>Аня 6</div>
                             <div>еда</div>
@@ -151,10 +126,6 @@ const AdvertiserOrderChoice = () => {
                             <div>1</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.item}>
-                                <label htmlFor="1"></label>
-                                <input type="checkbox" name="1" id="1" />
-                            </div>
                             <div>Tiktok</div>
                             <div>Аня 7</div>
                             <div>еда</div>
@@ -166,10 +137,6 @@ const AdvertiserOrderChoice = () => {
                             <div>1</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.item}>
-                                <label htmlFor="1"></label>
-                                <input type="checkbox" name="1" id="1" />
-                            </div>
                             <div>Instagram</div>
                             <div>Аня 8</div>
                             <div>еда</div>
@@ -181,10 +148,6 @@ const AdvertiserOrderChoice = () => {
                             <div>1</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.item}>
-                                <label htmlFor="1"></label>
-                                <input type="checkbox" name="1" id="1" />
-                            </div>
                             <div>Tiktok</div>
                             <div>Аня 9</div>
                             <div>еда</div>
@@ -212,4 +175,4 @@ const AdvertiserOrderChoice = () => {
     );
 };
 
-export default AdvertiserOrderChoice;
+export default AdvertiserAcceptance;
