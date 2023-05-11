@@ -16,20 +16,20 @@
         padding-top: 23px;
     }
 }
-.AdvertiserAcceptance{
+.AdvertiserChat{
     left: -8px;
     position: relative;
     padding-bottom:50px;
-    top:108px;
+    top:116px;
     width: 1102px;
-    height:631px;
+    height:598px;
     margin: 0 auto;
     background-color: rgba(255, 118, 0, 0.2);
     border-radius: 30px;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.10);
     @media (max-width: 320px) {
         left: 0px;
-        top: 64px;
+        top: 63px;
         width: 100%;
         height: 346px;
         border-top-right-radius: 0px;
@@ -41,14 +41,14 @@
     padding-top:210px;
      padding-left: 77px;
      @media (max-width: 320px) {
-         padding-top: 113px;
+         padding-top: 110px;
          padding-left: 0px;
      
      }
  }
 
  .links{
-    padding-top: 30px;
+    padding-top: 23px;
     padding-left: 38px;
     display: flex;
     gap:50px;
@@ -164,7 +164,7 @@
 
  .table{
     position: relative;
-    padding-left:37px;
+    padding-left:39px;
     padding-top:20px;
     @media (max-width: 320px) {
         padding-top: 4px;
@@ -178,21 +178,21 @@
         padding-top: 4px;
         position: relative;
         display: grid;
-        grid-template-columns: 92px 67px 86px 97px 76px 80px 72px 123px 95px 118px 64px 72px;
+        grid-template-columns: 103px 90px 96px 104px 79px 81px 144px 112px 106px 116px;
         grid-template-rows:55px;
         @media (max-width: 320px) {
-            grid-template-columns: 69px 64px 70px 78px 75px 52px 53px 119px 86px 86px 69px 80px;
+            grid-template-columns: 69px 64px 70px 78px 75px 52px 119px 86px 86px 69px;
             grid-template-rows:43px;
              }
 
         >div{
-            &:nth-child(10){
+            &:nth-child(9){
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 >a{
-                    font-size: 14px;
-                    width: 60px;
+                    font-size: 16px;
+                    width: 70px;
                     line-height: 14px;
                     font-weight: $weight-500;
                     @media (max-width: 320px) {
@@ -203,7 +203,7 @@
                    }
             }
       
-        font-size: 14px;
+        font-size: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -230,10 +230,10 @@
     &Body {
         position: relative;
         display: grid;
-        grid-template-columns: 92px 67px 86px 97px 76px 80px 72px 123px 95px 118px 64px 72px;
+        grid-template-columns: 103px 90px 96px 104px 79px 81px 144px 112px 106px 116px;
         grid-template-rows:30px;
         @media (max-width: 320px) {
-            grid-template-columns: 69px 64px 70px 78px 75px 52px 53px 119px 86px 86px 69px 80px;
+            grid-template-columns: 69px 64px 70px 78px 75px 52px 119px 86px 86px 69px;
             grid-template-rows:20px;
             
         }       
@@ -263,52 +263,158 @@
 }       
 } 
 
-
-
-
-.order{
-    padding-top: 9px;
-    padding-left: 39px;
-    display: flex;
-    gap:446px;
-    @media (max-width: 320px) {
-      display: none;
-   }
-    >Span{
-        padding-top: 4px;
-        letter-spacing: 0px;
-        font-size: 18px;
-        line-height: 21px;
-        font-weight: $weight-700;
-    }
-    >h4{
-        border: 1px solid rgba(240, 158, 86, 0.58);
-        border-radius: 10px;
-        padding-top:4px;
-        padding-bottom: 4px;
-        padding-left:8px;
-        padding-right: 8px;
-        font-size: 18px;
-        line-height: 21px;
-        font-weight: $weight-700;
-    }
-}
-
-.btn{
-    padding-top:28px;
-    padding-left: 39px;
-    display: flex;
-    gap:14px;
-    @media (max-width: 320px) {
-        display: none;
+.check{
+    >label{
+        position: relative;
+        display: flex;
+        height: 20px;
+        width:20px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid rgba(13, 13, 13, 0.59);
+        margin-left:46px;
+        cursor: pointer;
+        @media (max-width: 320px) {
+            margin-left:28px;
+            height: 15px;
+            width:15px;
+       }
+        &::before{
+            content: "";  
+            position: absolute;
+            background-image: url("../../../assets/main/checkbox.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+            top:8%;
+            left:4%;
+            width: 22px;
+            height:14px;
+            @media (max-width: 320px) {
+                top:15%;
+                left:1%;
+                width: 15px;
+                height:15px;
+           }
+            
+        }
      }
-    >button{
-    cursor: pointer;
-    height: 30px;
-    width: 106px;
-    background: #F09E56;
-    border: 1px solid rgba(240, 158, 86, 0.58);
-    border-radius: 10px;
-    font-weight: $weight-700;
-    }
+     input{
+         display: none;
+      }
 }
+
+
+
+.chat{
+    padding-top: 27px;
+    padding-left: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    position: relative;
+    @media (max-width: 320px) {
+        padding-top: 14px;
+        padding-left: 10px;
+        gap: 8px;
+        }
+        &Data{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            @media (max-width: 320px) {
+                gap: 13px;
+           }
+            >label{
+                font-size: 18px;
+                line-height: 21px;
+                font-weight: $weight-700;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                @media (max-width: 320px) {
+                    font-size: 14px;
+                    line-height: 16.41px;
+               }
+            }
+            >textarea{
+                background: rgba(255, 118, 0, 0.02);
+                padding-top: 14px;
+                padding-left: 5px;
+                text-indent: 20px;
+                font-size: 16px;
+                line-height: 17.75px;
+                width: 393px;
+                height: 204px;
+                border: 1px solid rgba(240, 158, 86, 0.58);
+                border-radius: 10px;
+                @media (max-width: 320px) {
+                    padding-top: 10px;
+                    text-indent: 7px;
+                    width: 279px;
+                    height: 82px;
+                    font-size: 12px;
+               }
+            }
+        }
+        &Actions{
+            padding-left:109px;
+            display: flex;
+            gap: 25px;
+            @media (max-width: 320px) {
+                padding-left:77px;
+                gap: 14px;
+           }
+            >label{
+                padding-top: 3px;
+                position: relative;
+	            display: inline-block;
+                cursor: pointer;
+                text-decoration: underline;
+                >span{
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    font-size: 16px;
+                    line-height: 18.75px;
+                    box-sizing: border-box;
+                    text-decoration: underline;
+                    @media (max-width: 320px) {
+                     
+                        font-size: 12px;
+                        line-height: 14px;
+                        white-space: nowrap;
+                   };
+                }
+                >input[type=file] {
+                    position: absolute;
+                    z-index: -1;
+                    opacity: 0;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                }
+               
+            }
+           >button{
+            margin-bottom: 2px;
+            cursor: pointer;
+            height: 30px;
+            width: 125px;
+            background: #F09E56;
+            border: 1px solid rgba(240, 158, 86, 0.58);
+            border-radius: 10px;
+            font-weight: $weight-700;
+            @media (max-width: 320px) {
+                margin-top: 4px;
+                font-size:12px ;
+                height: 20px;
+                width: 88px;
+           };
+           }
+           
+        }
+    
+    }
+
+
+

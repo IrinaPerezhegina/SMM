@@ -55,7 +55,9 @@ const AdvertiserAcceptance = () => {
                             <div>Бюджет</div>
                             <div>Преобладающая эмоция</div>
                             <div>Цена за подписчика, руб</div>
-                            <div>Ссылка на пост</div>
+                            <div>
+                                <Link>Ссылка на пост</Link>
+                            </div>
                             <div>Принять все</div>
                             <div>Чат с блогером</div>
                         </div>
@@ -66,9 +68,15 @@ const AdvertiserAcceptance = () => {
                             <div>100</div>
                             <div>200</div>
                             <div>200</div>
-                            <div>радость (30%)</div>
                             <div>100</div>
+                            <div>радость (30%)</div>
                             <div>1</div>
+                            <div>link 1</div>
+                            <div> кнопка</div>
+                            <div>
+                                {" "}
+                                <Link to={"chat"}>чат</Link>
+                            </div>
                         </div>
                         <div className={styles.tableBody}>
                             <div>Instagram</div>
@@ -77,9 +85,15 @@ const AdvertiserAcceptance = () => {
                             <div>100</div>
                             <div>200</div>
                             <div>200</div>
+                            <div>200</div>
                             <div>грусть (20%)</div>
-                            <div>100</div>
                             <div>1</div>
+                            <div>link 2</div>
+                            <div> кнопка</div>
+                            <div>
+                                {" "}
+                                <Link to={"chat"}>чат</Link>
+                            </div>
                         </div>
                         <div className={styles.tableBody}>
                             <div>Tiktok</div>
@@ -88,9 +102,15 @@ const AdvertiserAcceptance = () => {
                             <div>100</div>
                             <div>200</div>
                             <div>200</div>
+                            <div>300</div>
                             <div>радость (30%)</div>
-                            <div>100</div>
                             <div>1</div>
+                            <div>link 3</div>
+                            <div> кнопка</div>
+                            <div>
+                                {" "}
+                                <Link to={"chat"}>чат</Link>
+                            </div>
                         </div>
                         <div className={styles.tableBody}>
                             <div>Instagram</div>
@@ -99,9 +119,15 @@ const AdvertiserAcceptance = () => {
                             <div>100</div>
                             <div>200</div>
                             <div>200</div>
+                            <div>400</div>
                             <div>грусть (20%)</div>
-                            <div>100</div>
                             <div>1</div>
+                            <div>link 4</div>
+                            <div> кнопка</div>
+                            <div>
+                                {" "}
+                                <Link to={"chat"}>чат</Link>
+                            </div>
                         </div>
                         <div className={styles.tableBody}>
                             <div>Tiktok</div>
@@ -110,9 +136,15 @@ const AdvertiserAcceptance = () => {
                             <div>100</div>
                             <div>200</div>
                             <div>200</div>
+                            <div>500</div>
                             <div>радость (30%)</div>
-                            <div>100</div>
                             <div>1</div>
+                            <div>link 5</div>
+                            <div> кнопка</div>
+                            <div>
+                                {" "}
+                                <Link to={"chat"}>чат</Link>
+                            </div>
                         </div>
                         <div className={styles.tableBody}>
                             <div>Instagram</div>
@@ -121,9 +153,15 @@ const AdvertiserAcceptance = () => {
                             <div>100</div>
                             <div>200</div>
                             <div>200</div>
+                            <div>600</div>
                             <div>грусть (20%)</div>
-                            <div>100</div>
                             <div>1</div>
+                            <div>link 6</div>
+                            <div> кнопка</div>
+                            <div>
+                                {" "}
+                                <Link to={"chat"}>чат</Link>
+                            </div>
                         </div>
                         <div className={styles.tableBody}>
                             <div>Tiktok</div>
@@ -132,9 +170,15 @@ const AdvertiserAcceptance = () => {
                             <div>100</div>
                             <div>200</div>
                             <div>200</div>
+                            <div>700</div>
                             <div>радость (30%)</div>
-                            <div>100</div>
                             <div>1</div>
+                            <div>link 7</div>
+                            <div> кнопка</div>
+                            <div>
+                                {" "}
+                                <Link to={"chat"}>чат</Link>
+                            </div>
                         </div>
                         <div className={styles.tableBody}>
                             <div>Instagram</div>
@@ -143,9 +187,15 @@ const AdvertiserAcceptance = () => {
                             <div>100</div>
                             <div>200</div>
                             <div>200</div>
-                            <div>грусть (20%)</div>
-                            <div>100</div>
+                            <div>800</div>
+                            <div> грусть (20%)</div>
                             <div>1</div>
+                            <div>link 8</div>
+                            <div> кнопка</div>
+                            <div>
+                                {" "}
+                                <Link to={"chat"}>чат</Link>
+                            </div>
                         </div>
                         <div className={styles.tableBody}>
                             <div>Tiktok</div>
@@ -154,18 +204,24 @@ const AdvertiserAcceptance = () => {
                             <div>100</div>
                             <div>200</div>
                             <div>200</div>
+                            <div>900</div>
                             <div>радость (30%)</div>
-                            <div>100</div>
                             <div>1</div>
+                            <div>link 7</div>
+                            <div> кнопка</div>
+                            <div>
+                                {" "}
+                                <Link to={"chat"}>чат</Link>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className={styles.order}>
-                    <span>Сумма заказа </span>
-                    <h4>40 000 руб.</h4>
+                    <span>Итого </span>
+                    <h4>Сумма</h4>
                 </div>
                 <div className={styles.btn}>
-                    <button>Заказать</button>
+                    <button>Принять</button>
                 </div>
             </section>
             <div className={styles.statistics}>
