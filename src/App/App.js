@@ -14,6 +14,7 @@ import AdvertiserFinancePage from "./pages/AdvertiserFinancePage";
 import AdvertiserOrderChoicePage from "./pages/AdvertiserOrderChoicePage";
 import AdvertiserAcceptancePage from "./pages/AdvertiserAcceptancePage";
 import AdvertiserChatPage from "./pages/AdvertiserChatPage";
+import SearchOutputPage from "./pages/SearchOutputPage";
 
 function App() {
     return (
@@ -44,6 +45,7 @@ function App() {
                     path="advneworder/advacceptance/chat"
                     element={<AdvertiserChatPage />}
                 />
+                <Route path="search" element={<SearchOutputPage />} />
             </Routes>
         </div>
     );

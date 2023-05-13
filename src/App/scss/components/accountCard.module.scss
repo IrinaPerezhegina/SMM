@@ -1,0 +1,51 @@
+@import "../libs/normalize.scss";
+@import "../libs/variable.scss";
+
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+    height: 365px;
+    @media (max-width: 320px) {
+        gap:9px;
+        width: 140px;
+        height: 247px;
+        
+        }
+
+    &Img{
+        >img{
+        width: 200px;
+        height: 200px;
+        @media (max-width: 320px) {
+            width: 140px;
+            height:140px;
+            object-fit:contain;
+            }
+    
+    }
+}
+    &Data{
+        line-height: 21.09px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media (max-width: 320px) {
+            gap: 6px;
+            >span{
+                font-size: 12px;
+                line-height: 14px;
+              
+            }
+          
+            }
+    }
+}

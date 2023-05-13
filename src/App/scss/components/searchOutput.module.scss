@@ -1,0 +1,52 @@
+@import "../libs/normalize.scss";
+@import "../libs/variable.scss";
+
+
+.wrapper{
+    overflow: hidden;
+    padding-top: 56px;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    width: 1200px;
+    max-height: 1271px;
+    margin: 0 auto;
+    @media (max-width: 320px) {
+        max-height: 1427px;
+        width: 320px;
+        padding-top: 23px;
+
+    }
+}
+
+.content{
+    padding-top: 92px;
+    padding-left: 80px;
+    padding-right:80px;
+    justify-content: space-between;
+    gap: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 320px) {
+        height: 100%;
+        gap: 35px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 46px;
+        padding-left: 0px;
+        padding-right:0px;
+        justify-content:space-between;
+        width: 320px;
+    
+    }
+}
+
+.statistics{
+    padding-top:100px;
+     padding-left: 77px;
+     @media (max-width: 320px) {
+         padding-top: 67px;
+         padding-left: 0px;
+     
+     }
+ }
