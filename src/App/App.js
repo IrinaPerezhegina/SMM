@@ -15,37 +15,39 @@ import AdvertiserOrderChoicePage from "./pages/AdvertiserOrderChoicePage";
 import AdvertiserAcceptancePage from "./pages/AdvertiserAcceptancePage";
 import AdvertiserChatPage from "./pages/AdvertiserChatPage";
 import SearchOutputPage from "./pages/SearchOutputPage";
+import AdminPage from "./pages/AdminPage";
 
 function App() {
     return (
         <div className={styles.wrapper}>
             <Routes>
                 <Route path="" element={<MainPage />} />
-                <Route path="register" element={<RegisterPage />} />
-                <Route path="login" element={<LoginPage />} />
-                <Route path="blgprofile" element={<BloggerProfilePage />} />
-                <Route path="blgfinance" element={<BloggerFinancePage />} />
-                <Route path="blgorder" element={<BloggerOrderPage />} />
-                <Route path="advprofile" element={<AdvertiserProfilePage />} />
-                <Route path="advorder" element={<AdvertiserOrderPage />} />
+                <Route path="/register" element={<RegisterPage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/blgprofile" element={<BloggerProfilePage />} />
+                <Route path="/blgfinance" element={<BloggerFinancePage />} />
+                <Route path="/blgorder" element={<BloggerOrderPage />} />
+                <Route path="/advprofile" element={<AdvertiserProfilePage />} />
+                <Route path="/advorder" element={<AdvertiserOrderPage />} />
                 <Route
-                    path="advneworder"
+                    path="/advneworder"
                     element={<AdvertiserNewOrderPage />}
                 />
                 <Route
-                    path="advneworder/choice"
+                    path="/advneworder/choice"
                     element={<AdvertiserOrderChoicePage />}
                 />
-                <Route path="advfinance" element={<AdvertiserFinancePage />} />
+                <Route path="/advfinance" element={<AdvertiserFinancePage />} />
                 <Route
-                    path="advneworder/advacceptance"
+                    path="/advneworder/advacceptance"
                     element={<AdvertiserAcceptancePage />}
                 />
                 <Route
-                    path="advneworder/advacceptance/chat"
+                    path="/advneworder/advacceptance/chat"
                     element={<AdvertiserChatPage />}
                 />
-                <Route path="search" element={<SearchOutputPage />} />
+                <Route path="/search" element={<SearchOutputPage />} />
+                <Route path="/admin" element={<AdminPage />} />
             </Routes>
         </div>
     );
