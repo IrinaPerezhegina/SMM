@@ -94,41 +94,27 @@ export const signUp = (payload) => async (dispatch) => {
 //     dispatch(userLoggedOut());
 // };
 
-// export const login = (payload) => async (dispatch) => {
-//     const { email, password } = payload;
-//     dispatch(authRequested());
-//     try {
-//         const data = await authService.login({ email, password });
-//         localStorageService.setTokens(data);
-//         dispatch(authRequestSuccess({ userId: data.userId }));
-//     } catch (error) {
-//         const { code, message } = error.response.data.error;
-//         if (code === 400) {
-//             const errorMessage = generateAuthError(message);
-//             dispatch(authRequestFailed(errorMessage));
-//         } else {
-//             dispatch(authRequestFailed(error.message));
-//         }
-//     }
-// };
+export const signIn = (payload) => async (dispatch) => {
+    dispatch(authRequested());
+    try {
+        const data = await authService.login(payload);
+        const tokenData = await authService.token(payload);
+        localStorageService.setTokens({
+            refreshToken: tokenData.refresh,
+            accessToken: tokenData.access,
+            username: data.username
+        });
+        dispatch(authRequestSuccess({ username: data.username }));
+    } catch (error) {
+        const { code, message } = error.response.data;
+        if (code === 400) {
+            const errorMessage = generateAuthError(message);
+            dispatch(authRequestFailed(errorMessage));
+        } else {
+            dispatch(authRequestFailed(error.message));
+        }
+    }
+};
 export const getAuthErrors = () => (state) => state.user.error;
-// export const getDataIsLoading = () => (state) => state.user.isLoading;
-// export const getDataStatus = () => (state) => state.user.dataLoaded;
-// export const getIsLoggedIn = () => (state) => state.user.isLoggedIn;
-// export const getIsAdminIn = () => (state) => {
-//     if (state.user.entities) {
-//         return state.user.entities.isAdmin;
-//     } else return false;
-// };
-// export const getCurrentUserId = () => (state) => state.user.auth;
-// export const getCurrentBasket = () => (state) => {
-//     if (state.user.entities) {
-//         return state.user.entities.cartItems;
-//     } else return [];
-// };
-
-// export const getUserLoadingStatus = () => (state) => state.user.isLoading;
-// export const getCurrentUserData = () => (state) => state.user.entities;
-// export const getAuthErrors = () => (state) => state.user.error;
 
 export default usersReducer;

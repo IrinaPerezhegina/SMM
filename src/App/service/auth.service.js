@@ -11,12 +11,8 @@ const authService = {
         const { data } = await httpAuth.post(`register`, payload);
         return data;
     },
-    login: async ({ email, password }) => {
-        const { data } = await httpAuth.post(`login`, {
-            email,
-            password,
-            returnSecureToken: true
-        });
+    login: async (payload) => {
+        const { data } = await httpAuth.post(`login`, payload);
         return data;
     },
     token: async ({ username, password }) => {

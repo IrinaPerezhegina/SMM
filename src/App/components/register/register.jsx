@@ -99,7 +99,7 @@ const Register = () => {
                         <input
                             onChange={handleChange}
                             value={data.first_name}
-                            type="first_name"
+                            type="text"
                             name="first_name"
                             id="first_name"
                             placeholder="Name"
@@ -118,7 +118,7 @@ const Register = () => {
                         <input
                             onChange={handleChange}
                             value={data.last_name}
-                            type="last_name"
+                            type="text"
                             name="last_name"
                             id="last_name"
                             placeholder="Surname"
@@ -176,7 +176,7 @@ const Register = () => {
                         <input
                             onChange={handleChange}
                             value={data.username}
-                            type="username"
+                            type="text"
                             name="username"
                             id="username"
                             placeholder="username"
