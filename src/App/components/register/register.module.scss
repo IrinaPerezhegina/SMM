@@ -70,7 +70,7 @@
         line-height: 14.06px;
     }
     }
-    >button{
+    >input{
         border: none;
         margin-top: 11px;
         width: 243px;
@@ -105,4 +105,21 @@
         padding-left: 0px;
        
     }
+}
+
+.inputError{
+    position: absolute;
+    font-size: 11px;
+    color: red;
+    padding-left: 15px;
+    padding-top: 2px;
+}
+
+.registerError{
+    color: red;
+    text-align: center;
+    font-size: 12px;
+    position: static;
+    opacity: .7;
+
 }

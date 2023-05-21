@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./main.module.scss";
-
 import GroupComponent from "../ui/groupComponent";
-
 import hand from "../../../App/assets/main/bd58815194b5fffd923a49857909db5c 1.png";
 import Statistics from "../ui/statistics";
 
