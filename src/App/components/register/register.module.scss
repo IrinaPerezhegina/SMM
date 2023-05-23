@@ -116,10 +116,13 @@
 }
 
 .registerError{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
     color: red;
     text-align: center;
     font-size: 12px;
-    position: static;
+    position: relative;
     opacity: .7;
 
 }

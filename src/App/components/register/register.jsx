@@ -191,9 +191,12 @@ const Register = () => {
                             {errors.username}
                         </div>
                     </div>
-                    {registerError && (
-                        <p className={styles.registerError}>{registerError}</p>
-                    )}
+                    {registerError &&
+                        registerError.map((item) => (
+                            <p className={styles.registerError} key={item}>
+                                {item}
+                            </p>
+                        ))}
                     <input
                         disabled={!isValid}
                         type="submit"

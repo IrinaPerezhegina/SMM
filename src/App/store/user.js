@@ -59,7 +59,7 @@ const usersSlice = createSlice({
 });
 
 const { reducer: usersReducer, actions } = usersSlice;
-const { authRequestSuccess, authRequestFailed } = actions;
+const { authRequestSuccess, authRequestFailed, userLoggedOut } = actions;
 
 const authRequested = createAction("user/authRequested");
 
@@ -67,7 +67,12 @@ export const signUp = (payload) => async (dispatch) => {
     dispatch(authRequested());
     try {
         const { username, password } = await authService.register(payload);
-        const tokenData = await authService.token(username, password);
+        console.log(payload);
+        console.log(password);
+        const tokenData = await authService.token({
+            username: payload.username,
+            password: payload.password
+        });
         localStorageService.setTokens({
             refreshToken: tokenData.refresh,
             accessToken: tokenData.access,
@@ -79,9 +84,11 @@ export const signUp = (payload) => async (dispatch) => {
             })
         );
     } catch (error) {
-        const { code, message } = error.response.data;
-        if (code === 400) {
-            const errorMessage = generateAuthError(message);
+        const { status, data } = error.response;
+        console.log(data);
+        if (status === 400) {
+            const errorMessage = generateAuthError(data);
+            console.log(errorMessage);
             dispatch(authRequestFailed(errorMessage));
         } else {
             dispatch(authRequestFailed(error.message));
@@ -89,10 +96,10 @@ export const signUp = (payload) => async (dispatch) => {
     }
 };
 
-// export const logOut = () => (dispatch) => {
-//     localStorageService.removeAuthData();
-//     dispatch(userLoggedOut());
-// };
+export const logOut = () => (dispatch) => {
+    localStorageService.removeAuthData();
+    dispatch(userLoggedOut());
+};
 
 export const signIn = (payload) => async (dispatch) => {
     dispatch(authRequested());
@@ -109,7 +116,8 @@ export const signIn = (payload) => async (dispatch) => {
         const { code, message } = error.response.data;
         if (code === 400) {
             const errorMessage = generateAuthError(message);
-            dispatch(authRequestFailed(errorMessage));
+            console.log(errorMessage, error.response);
+            dispatch(authRequestFailed(message));
         } else {
             dispatch(authRequestFailed(error.message));
         }
