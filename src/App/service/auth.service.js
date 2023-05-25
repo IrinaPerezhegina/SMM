@@ -16,13 +16,12 @@ const authService = {
         return data;
     },
     token: async ({ username, password }) => {
-        const data = await httpAuth.post("token/", { username, password });
+        const { data } = await httpAuth.post("token/", { username, password });
         return data;
     },
     refresh: async () => {
-        const { data } = await httpAuth.post("token/", {
-            grant_type: "refresh_token",
-            refresh_token: localStorageService.getRefreshToken()
+        const { data } = await httpAuth.post("token/refresh/", {
+            refresh: localStorageService.getRefreshToken()
         });
         return data;
     }

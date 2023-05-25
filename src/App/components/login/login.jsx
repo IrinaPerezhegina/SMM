@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import styles from "./login.module.scss";
 import GroupComponent from "../ui/groupComponent";
 import Statistics from "../ui/statistics";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getAuthErrors, signIn } from "../../store/user";
+import { getAuthErrors, signIn, getIsLoggedIn } from "../../store/user";
 import * as yup from "yup";
 
 const nameRegex = /^[a-zA-Z0-9._@+-]*$/;
@@ -21,6 +21,7 @@ const validateSchema = yup.object().shape({
 });
 
 const Login = () => {
+    const isLogged = useSelector(getIsLoggedIn());
     const dispatch = useDispatch();
     const registerError = useSelector(getAuthErrors());
     const [data, setData] = useState({
@@ -29,7 +30,7 @@ const Login = () => {
     });
     const [errors, setErrors] = useState({});
     console.log(registerError);
-
+    const navigate = useNavigate();
     useEffect(() => {
         validate();
     }, [data]);
@@ -42,7 +43,11 @@ const Login = () => {
         return Object.keys(errors).length === 0;
     };
     const isValid = Object.keys(errors).length === 0;
-
+    useEffect(() => {
+        if (isLogged) {
+            navigate(-1);
+        }
+    }, [isLogged]);
     const handleSubmit = (e) => {
         e.preventDefault();
         const isValid = validate();

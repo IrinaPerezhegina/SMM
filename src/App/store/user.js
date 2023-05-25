@@ -1,8 +1,8 @@
 import { createAction, createSlice } from "@reduxjs/toolkit";
 import authService from "../service/auth.service";
 import localStorageService from "../service/localStorage.service";
-// import userService from "../service/user.service";
 import { generateAuthError } from "../utils/generateAuthError";
+// import userService from "../service/user.service";
 
 const initialState = localStorageService.getAccessToken()
     ? {
@@ -67,17 +67,18 @@ export const signUp = (payload) => async (dispatch) => {
     dispatch(authRequested());
     try {
         const { username, password } = await authService.register(payload);
-        console.log(payload);
         console.log(password);
-        const tokenData = await authService.token({
+        const { refresh, access } = await authService.token({
             username: payload.username,
             password: payload.password
         });
+
         localStorageService.setTokens({
-            refreshToken: tokenData.refresh,
-            accessToken: tokenData.access,
+            refreshToken: refresh,
+            accessToken: access,
             username
         });
+
         dispatch(
             authRequestSuccess({
                 username
@@ -85,18 +86,17 @@ export const signUp = (payload) => async (dispatch) => {
         );
     } catch (error) {
         const { status, data } = error.response;
-        console.log(data);
         if (status === 400) {
             const errorMessage = generateAuthError(data);
-            console.log(errorMessage);
             dispatch(authRequestFailed(errorMessage));
         } else {
-            dispatch(authRequestFailed(error.message));
+            dispatch(authRequestFailed(data));
         }
     }
 };
 
-export const logOut = () => (dispatch) => {
+export const logOut = () => async (dispatch) => {
+    // await userService.delete();
     localStorageService.removeAuthData();
     dispatch(userLoggedOut());
 };
@@ -104,25 +104,31 @@ export const logOut = () => (dispatch) => {
 export const signIn = (payload) => async (dispatch) => {
     dispatch(authRequested());
     try {
-        const data = await authService.login(payload);
-        const tokenData = await authService.token(payload);
-        localStorageService.setTokens({
-            refreshToken: tokenData.refresh,
-            accessToken: tokenData.access,
-            username: data.username
+        const { username, password } = await authService.login(payload);
+        console.log(password);
+        const { refresh, access } = await authService.token({
+            username: payload.username,
+            password: payload.password
         });
-        dispatch(authRequestSuccess({ username: data.username }));
+
+        localStorageService.setTokens({
+            refreshToken: refresh,
+            accessToken: access,
+            username
+        });
+
+        dispatch(authRequestSuccess({ username }));
     } catch (error) {
-        const { code, message } = error.response.data;
-        if (code === 400) {
-            const errorMessage = generateAuthError(message);
-            console.log(errorMessage, error.response);
-            dispatch(authRequestFailed(message));
+        const { status, data } = error.response;
+        if (status === 400) {
+            const errorMessage = generateAuthError(data);
+            dispatch(authRequestFailed(errorMessage));
         } else {
-            dispatch(authRequestFailed(error.message));
+            dispatch(authRequestFailed(data));
         }
     }
 };
 export const getAuthErrors = () => (state) => state.user.error;
-
+export const getIsLoggedIn = () => (state) => state.user.isLoggedIn;
+export const getAuthUsername = () => (state) => state.user.auth?.username;
 export default usersReducer;

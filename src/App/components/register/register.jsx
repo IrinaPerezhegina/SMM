@@ -4,10 +4,13 @@ import GroupComponent from "../ui/groupComponent";
 import Statistics from "../ui/statistics";
 import { useDispatch, useSelector } from "react-redux";
 import * as yup from "yup";
-import { getAuthErrors, signUp } from "../../store/user";
+import { getAuthErrors, getIsLoggedIn, signUp } from "../../store/user";
+import { useNavigate } from "react-router-dom";
 
 const nameRegex = /^[a-zA-Z0-9._@+-]*$/;
+const nameRegexPassword = /^(?=.*[a-z])/;
 const validateSchema = yup.object().shape({
+    role: yup.string().required(`Поле 'Role' обязательно для заполнения`),
     username: yup
         .string()
         .required(`Поле 'Username' обязательно для заполнения`)
@@ -20,7 +23,8 @@ const validateSchema = yup.object().shape({
     password: yup
         .string()
         .required(`Поле 'Password' обязательно для заполнения`)
-        .min(8),
+        .min(8, "Минимальная длина 8 символов")
+        .matches(nameRegexPassword, "Пароль должен содержать строчную букву"),
     last_name: yup
         .string()
         .required(`Поле 'Surname' обязательно для заполнения`),
@@ -32,7 +36,9 @@ const validateSchema = yup.object().shape({
 });
 
 const Register = () => {
+    const isLogged = useSelector(getIsLoggedIn());
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const registerError = useSelector(getAuthErrors());
     const [data, setData] = useState({
         email: "",
@@ -40,10 +46,17 @@ const Register = () => {
         last_name: "",
         password: "",
         password2: "",
-        username: ""
+        username: "",
+        role: ""
     });
-    const [errors, setErrors] = useState({});
 
+    useEffect(() => {
+        if (isLogged) {
+            navigate(-1);
+        }
+    }, [isLogged]);
+    const [errors, setErrors] = useState({});
+    console.log(registerError);
     useEffect(() => {
         validate();
     }, [data]);
@@ -69,7 +82,7 @@ const Register = () => {
             [target.name]: target.value
         }));
     };
-    console.log(registerError);
+
     return (
         <section className={styles.wrapper}>
             <GroupComponent />
@@ -189,6 +202,27 @@ const Register = () => {
                             }
                         >
                             {errors.username}
+                        </div>
+                    </div>
+                    <div className={styles.registerSelect}>
+                        <select
+                            onChange={handleChange}
+                            value={data.value}
+                            id="role"
+                            name="role"
+                        >
+                            <option value="">role</option>
+                            <option value={"blogger"}>Blogger</option>
+                            <option value={"advertiser"}>Advertiser</option>
+                        </select>
+                        <div
+                            className={
+                                errors.role
+                                    ? styles.inputError
+                                    : "invalid-feedback"
+                            }
+                        >
+                            {errors.role}
                         </div>
                     </div>
                     {registerError &&

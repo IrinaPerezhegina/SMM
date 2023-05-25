@@ -2,8 +2,14 @@ import React from "react";
 import styles from "./header.module.scss";
 import BtnEnter from "../ui/btnEnter";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getIsLoggedIn, getAuthUsername, logOut } from "../../store/user";
 
 const Header = () => {
+    const dispatch = useDispatch();
+    const getLoggedIn = useSelector(getIsLoggedIn());
+    const authUsername = useSelector(getAuthUsername());
+
     return (
         <>
             <header className={styles.wrapper}>
@@ -16,11 +22,24 @@ const Header = () => {
                         <Link to={"/"}>Контакты</Link>
                     </div>
                     <div>
-                        <Link to={"/register"}> Зарегистрироваться</Link>
+                        {!getLoggedIn ? (
+                            <Link to={"/register"}> Зарегистрироваться</Link>
+                        ) : (
+                            <span>{authUsername}</span>
+                        )}
                     </div>
-                    <Link to={"/login"}>
-                        <BtnEnter />
-                    </Link>
+                    {!getLoggedIn ? (
+                        <Link to={"/login"}>
+                            <BtnEnter />
+                        </Link>
+                    ) : (
+                        <button
+                            className={styles.logOut}
+                            onClick={() => dispatch(logOut())}
+                        >
+                            Выйти
+                        </button>
+                    )}
                 </div>
             </header>
         </>
