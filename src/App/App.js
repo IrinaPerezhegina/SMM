@@ -21,7 +21,7 @@ function App() {
     return (
         <div className={styles.wrapper}>
             <Routes>
-                <Route path="SMM" element={<MainPage />} />
+                <Route path="" element={<MainPage />} />
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/blgprofile" element={<BloggerProfilePage />} />
